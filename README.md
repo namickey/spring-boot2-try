@@ -140,15 +140,18 @@ vscodeなどの開発環境を使って機能追加しよう
 
 ## 参考　spring initializr
 
+spring-bootの最小構成のデモアプリケーションを作成して、ダウンロードする  
+
 https://start.spring.io/
 
 https://spring.pleiades.io/quickstart
 
+今回使用したライブラリの設定イメージ  
 ![spring initializr](initializr.png)
 
 ## 参考
 
 以下が網羅的かつ実務的かつ実用的なspring-boot開発
 
-Spring Frameworkを利用する実プロジェクトで活用できる設計・開発標準
+Spring Frameworkを利用する実プロジェクトで活用できる設計・開発標準  
 https://fintan.jp/page/5311/
