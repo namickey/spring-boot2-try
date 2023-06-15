@@ -165,7 +165,7 @@ Ctrl + C
 
 ## 参考　spring initializr
 
-spring-bootの最小構成のデモアプリケーションを作成して、ダウンロードする  
+spring-bootの最小構成のデモアプリケーションを作成して、ダウンロード  
 
 https://start.spring.io/
 
@@ -173,6 +173,29 @@ https://spring.pleiades.io/quickstart
 
 今回使用したライブラリの設定イメージ  
 ![spring initializr](initializr.png)
+
+以下のような構成のアプリケーションが生成されて、ダウンロードできすぐに開発を開始できる。
+```
+C:.
+│  .gitignore
+│  mvnw
+│  mvnw.cmd
+│  pom.xml
+│  README.md
+├─src
+│  ├─main
+│  │  ├─java
+│  │  │  └─com
+│  │  │      └─example
+│  │  │          └─demo
+│  │  │              │  DemoApplication.java
+│  │  │                      
+│  │  └─resources
+│  │      │  application.properties
+│  │      │  
+│  │      ├─static
+│  │      └─templates
+```
 
 ## 参考
 
