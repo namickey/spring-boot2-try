@@ -1,5 +1,7 @@
 # spring-boot2-try
 
+Spring-Bootで効率的なアプリケーション開発
+
 ## やりたいこと
 
 * Spring-Bootを使った効率的な開発をする、起動までに必要な手順を最小化する
@@ -16,6 +18,14 @@ https://qiita.com/syobochim/items/120109315f671918f28d
 
 【Java】Lombokで冗長コードを削減しよう  
 https://www.casleyconsulting.co.jp/blog/engineer/107/ 
+
+## Spring-Bootとは
+
+- 設定ファイルレス  
+  あらかじめ様々な設定が設定済みとなっているため、自分で設定ファイルを書く量が少ない。  
+  
+- 簡単起動  
+  組み込みTomcatを使用するため、Tomcatのインストールが不要。  
 
 ## 前提環境
 
