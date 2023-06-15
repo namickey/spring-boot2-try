@@ -9,7 +9,7 @@
 * setter,getterは作成しない。lombokが生成してくれる
 * 二重サブミット対策としてPRGパターンを使う
 * Mavenを使ったライブラリ管理（自動でjarをダウンロードして、クラスパスを通してくれる）
-* アプリ起動中にソースコードを修正して保存するだけで、自動的にビルドと再起動が行われ、すぐに反映される
+* spring-boot-devtoolsで、アプリ起動中にソースコードを修正して保存するだけで、自動的にビルドと再起動が行われ、すぐに反映される
 
 さいきょうの二重サブミット対策  
 https://qiita.com/syobochim/items/120109315f671918f28d  
@@ -28,6 +28,7 @@ https://www.casleyconsulting.co.jp/blog/engineer/107/
 
 * spring-boot2.7
 * spring-boot-starter-web
+* spring-boot-devtools
 * thymeleaf
 * mybatis
 * lombok
@@ -90,8 +91,8 @@ C:.
 * データベース層ではFormクラスは使用しない。しっかりレイヤーを分ける。
 * Entityクラスはデータベース層で使用するクラス
 * 画面層ではEntityクラスは使用しないが、表示用には使用しても良い。Formという役割でEntityを使うことはダメ。
-* コントローラ⇒サービス⇒マッパーの順番で実装する。
-* コントローラ⇒マッパーの順番では実装しない。しっかりレイヤーを分ける。
+* コントローラ⇒サービス⇒マッパーのレイヤーを守って実装する。
+* コントローラ⇒マッパーというようなメソッド呼び出しはダメ。しっかりレイヤーを守る。
 
 ## 準備1 mysqlのデータベース作成
 
@@ -107,7 +108,7 @@ exit
 
 ## 準備2 githubからソースコードを取得
 
-ソースコードをダウンロードする
+gitを使ってソースコードをダウンロードする
 ```
 コマンドプロンプトで実行
 git clone https://github.com/namickey/spring-boot2-try.git
@@ -165,7 +166,7 @@ https://spring.pleiades.io/quickstart
 
 ## 参考
 
-以下が網羅的かつ実務的かつ実用的なspring-boot開発
+以下のリンクに、網羅的かつ実務的かつ実用的なspring-boot開発について公開情報あり。
 
 Spring Frameworkを利用する実プロジェクトで活用できる設計・開発標準  
 https://fintan.jp/page/5311/
