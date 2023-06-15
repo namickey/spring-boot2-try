@@ -20,6 +20,11 @@ public class ItemRegistService {
      * @param item Item
      */
     public void registItem(Item item) {
+        
+        //Itemクラスにsetter,getterは実装していないが「item.getItemName()」のビルドができる。
+        //Lombokの機能で「@Data」アノテーションをItemクラスに付けることでsetter,getterが生成されている。
+        System.out.println(item.getItemName());
+
         itemMapper.regist(item);
     }
 }

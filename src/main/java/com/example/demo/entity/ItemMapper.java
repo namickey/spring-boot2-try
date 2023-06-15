@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Select;
 
 /**
  * Itemマッパー
+ * MyBatis
  */
 @Mapper
 public interface ItemMapper {
@@ -16,13 +17,13 @@ public interface ItemMapper {
      * itemを全件取得する
      * @return itemリスト
      */
-    @Select("select * from item")
+    @Select("select * from item") // SQLをアノテーションで実装することもできる。
     List<Item> select();
 
     /**
      * itemをインサートする
      * @param item Item
      */
-    @Insert("insert into item(id, item_name, price) values(#{id}, #{itemName}, #{price})")
+    @Insert("insert into item(id, item_name, price) values(#{id}, #{itemName}, #{price})") // SQLが長くなるならXMLでも実装可能
     void regist(Item item);
 }

@@ -42,9 +42,15 @@ public class RegistController {
      */
     @PostMapping("/regist/regist")
     public String regist(@ModelAttribute ItemForm itemForm, BindingResult result) {
+
+        // ItemFormからItemエンティティへデータコピー
+        // 同じ名称のフィールドは自動的にコピーしてくれる。
         Item item = new Item();
         BeanUtils.copyProperties(itemForm, item);
+
+        // 登録サービス呼び出し
         itemRegistService.registItem(item);
+
         return "redirect:/regist/complete";
     }
 
