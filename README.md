@@ -163,6 +163,10 @@ Ctrl + C
 
 * 自分のgithubアカウントを作って、ソースを公開しよう
 
+## 次に業務アプリケーション開発を学ぼう
+
+https://github.com/namickey/spring-boot2-train
+
 ## 参考　spring initializr
 
 spring-bootの最小構成のデモアプリケーションを作成して、ダウンロード  
