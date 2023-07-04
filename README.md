@@ -27,6 +27,9 @@ https://www.casleyconsulting.co.jp/blog/engineer/107/
 - 簡単起動  
   組み込みTomcatを使用するため、Tomcatのインストールが不要。  
 
+- 短所としては、ライフサイクルが比較的短い  
+  https://spring.pleiades.io/projects/spring-boot#support
+
 ## 前提環境
 
 以下がインストール済みであること
@@ -135,9 +138,18 @@ http://localhost:8080/
 Ctrl + C
 ```
 
-## 開発する
+## やってみよう 
 
-統合開発環境（vscode、eclipse、intelliJ）を使って機能追加しよう
+* 実装と挙動を確認しよう
+* 全てを2回写経しよう
+* 未実装機能をつくってみよう
+
+## 開発しよう
+
+* 統合開発環境（vscode、eclipse、intelliJ）を使って機能追加しよう  
+  * vscode：おススメ、最新、軽量  
+  * eclipse：古き重き友人  
+  * intelliJ：おススメだが、`spring-boot-devtools`の自動デプロイ機能と相性が悪い。intelliJは入力する度にファイル保存されてしまうから。  
 * 入力チェックの追加
 * エラーハンドリングの追加
 * 検索画面の追加
@@ -146,13 +158,13 @@ Ctrl + C
 * javascriptの追加
 * etc
 
-## 公開する
+## 次に業務アプリケーション開発を学ぼう
+https://github.com/namickey/spring-boot2-train
+
+
+## 公開しよう
 
 * 自分のgithubアカウントを作って、ソースを公開しよう
-
-## 次に業務アプリケーション開発を学ぼう
-
-https://github.com/namickey/spring-boot2-train
 
 ## 参考　spring initializr
 
