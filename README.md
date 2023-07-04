@@ -5,7 +5,7 @@ Spring-Bootで効率的なアプリケーション開発
 ## やりたいこと
 
 * Spring-Bootを使った効率的な開発をする、起動までに必要な手順を最小化する
-* javaとMySQLだけがインストールされたマシンで、アプリケーションを起動する
+* javaだけがインストールされたマシンで、アプリケーションを起動する
 * 起動時に自動でテーブルをcreateし、dataをインサートしてから、アプリケーションが起動する
 * MyBatisというORマッパーを使う
 * setter,getterは作成しない。lombokが生成してくれる
@@ -31,7 +31,6 @@ https://www.casleyconsulting.co.jp/blog/engineer/107/
 
 以下がインストール済みであること
 * JDK 11
-* MySQL 8
 * git
 
 ## 使用するフレームワーク
@@ -41,6 +40,7 @@ https://www.casleyconsulting.co.jp/blog/engineer/107/
 * spring-boot-devtools
 * thymeleaf
 * mybatis
+* h2
 * lombok
 * 組み込みTomcat 9
 * 組み込みMaven 3
@@ -104,19 +104,7 @@ C:.
 * コントローラ⇒サービス⇒マッパーのレイヤーを守って実装する。
 * コントローラ⇒マッパーというようなメソッド呼び出しはダメ。しっかりレイヤーを守る。
 
-## 準備1 mysqlのデータベース作成
-
-データベースのみ作成する。テーブルは作成しない。
-```
-コマンドプロンプトで実行
-mysql -u root -p
-
-create database mydb;
-
-exit
-```
-
-## 準備2 githubからソースコードを取得
+## 準備 githubからソースコードを取得
 
 gitを使ってソースコードをダウンロードする
 ```

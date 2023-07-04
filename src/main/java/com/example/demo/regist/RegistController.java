@@ -1,31 +1,37 @@
 package com.example.demo.regist;
 
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.entity.Item;
 
+import lombok.RequiredArgsConstructor;
+
 /*
  * 登録画面コントローラ
+ * 
+ * 画面遷移：表示⇒確認⇒登録⇒リダイレクト⇒完了
  */
 @Controller
+@RequiredArgsConstructor
 public class RegistController {
 
-    @Autowired
-    ItemRegistService itemRegistService;
+    /** item登録サービス */
+    private final ItemRegistService itemRegistService;
 
     /*
      * 表示
      */
     @GetMapping("/regist/index")
     public String index(Model model) {
+        // 登録フォーム
         model.addAttribute("itemForm", new ItemForm());
+
+        // 登録画面を表示する
         return "regist/regist";
     }
 
@@ -33,7 +39,8 @@ public class RegistController {
      * 確認
      */
     @PostMapping("/regist/confirm")
-    public String confirm(@ModelAttribute ItemForm itemForm, BindingResult result) {
+    public String confirm(@ModelAttribute ItemForm itemForm) {
+        // 確認画面を表示する
         return "regist/confirm";
     }
 
@@ -41,16 +48,21 @@ public class RegistController {
      * 登録
      */
     @PostMapping("/regist/regist")
-    public String regist(@ModelAttribute ItemForm itemForm, BindingResult result) {
+    public String regist(@ModelAttribute ItemForm itemForm) {
 
-        // ItemFormからItemエンティティへデータコピー
+        // 入力チェックは省略
+
+        // Tips
+        // ItemFormからItemエンティティへデータをコピーする
         // 同じ名称のフィールドは自動的にコピーしてくれる。
         Item item = new Item();
         BeanUtils.copyProperties(itemForm, item);
 
-        // 登録サービス呼び出し
+        // 登録サービス呼び出し。引数にitemエンティティを渡す。
         itemRegistService.registItem(item);
 
+        // リダイレクトして、GETのHTTPメソッドで、完了画面を表示する
+        // 二重サブミット対策のPRGパターン（Post Redirect Get）
         return "redirect:/regist/complete";
     }
 
@@ -59,6 +71,7 @@ public class RegistController {
      */
     @GetMapping("/regist/complete")
     public String complete() {
+        // 完了画面を表示する
         return "regist/complete";
     }
 }

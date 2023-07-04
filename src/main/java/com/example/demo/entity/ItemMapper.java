@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Select;
 
 /**
  * Itemマッパー
- * MyBatis
+ * MyBatisを使って、SQLを発行する
  */
 @Mapper
 public interface ItemMapper {
@@ -17,7 +17,7 @@ public interface ItemMapper {
      * itemを全件取得する
      * @return itemリスト
      */
-    @Select("select * from item") // SQLをアノテーションで実装することもできる。
+    @Select("select * from item") // SQLをXMLではなく、アノテーションで実装することもできる。
     List<Item> select();
 
     /**
