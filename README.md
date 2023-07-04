@@ -51,7 +51,6 @@ https://www.casleyconsulting.co.jp/blog/engineer/107/
 ```
 C:.
 │  .gitignore
-│  initializr.png
 │  mvnw
 │  mvnw.cmd
 │  pom.xml
@@ -95,7 +94,7 @@ C:.
 
 ## アプリケーションの構造
 
-![spring initializr](app.png)
+![アプリケーションの構造](app.png)
 
 * Formクラスは画面層で使用するクラス
 * データベース層ではFormクラスは使用しない。しっかりレイヤーを分ける。
