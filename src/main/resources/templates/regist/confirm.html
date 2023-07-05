@@ -6,22 +6,22 @@
 </head>
 <body>
     <h1>item登録確認画面</h1>
-    <a href="/">TOP画面へ</a>
+    <a th:href="@{/}" href="../top/index.html">TOP画面へ</a>
 
-    <form method="POST" th:action="@{regist}" th:object="${itemForm}">
+    <form method="POST" th:action="@{regist}" action="./complete.html" th:object="${itemForm}">
         <div>
             <p>ID</p>
-            <div th:text="*{id}" ></div>
+            <div th:text="*{id}">3</div>
         </div>
 
         <div>
             <p>ITEM NAME</p>
-            <div th:text="*{itemName}" ></div>
+            <div th:text="*{itemName}">えんぴつ</div>
         </div>
 
         <div>
             <p>PRICE</p>
-            <div th:text="*{price}" ></div>
+            <div th:text="*{price}">100円</div>
         </div>
 
         <input type="hidden" th:field="*{id}" />

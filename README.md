@@ -43,8 +43,8 @@ https://www.casleyconsulting.co.jp/blog/engineer/107/
 * spring-boot-devtools
 * thymeleaf
 * mybatis
-* h2
 * lombok
+* 組み込みh2データベース
 * 組み込みTomcat 9
 * 組み込みMaven 3
 

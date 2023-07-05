@@ -2,9 +2,7 @@ package com.example.demo.regist;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.entity.Item;
@@ -27,10 +25,7 @@ public class RegistController {
      * 表示
      */
     @GetMapping("/regist/index")
-    public String index(Model model) {
-        // 登録フォーム
-        model.addAttribute("itemForm", new ItemForm());
-
+    public String index(ItemForm itemForm) {
         // 登録画面を表示する
         return "regist/regist";
     }
@@ -39,7 +34,7 @@ public class RegistController {
      * 確認
      */
     @PostMapping("/regist/confirm")
-    public String confirm(@ModelAttribute ItemForm itemForm) {
+    public String confirm(ItemForm itemForm) {
         // 確認画面を表示する
         return "regist/confirm";
     }
@@ -48,7 +43,7 @@ public class RegistController {
      * 登録
      */
     @PostMapping("/regist/regist")
-    public String regist(@ModelAttribute ItemForm itemForm) {
+    public String regist(ItemForm itemForm) {
 
         // 入力チェックは省略
 

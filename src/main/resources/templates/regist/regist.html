@@ -6,22 +6,22 @@
 </head>
 <body>
     <h1>item登録画面</h1>
-    <a href="/">TOP画面へ</a>
+    <a th:href="@{/}" href="../top/index.html">TOP画面へ</a>
 
-    <form method="POST" th:action="@{confirm}" th:object="${itemForm}">
+    <form method="POST" th:action="@{confirm}" action="./confirm.html" th:object="${itemForm}">
         <div>
             <p>ID</p>
-            <input type="text" th:field="*{id}" />
+            <input type="text" th:field="*{id}" value="3" />
         </div>
 
         <div>
             <p>ITEM NAME</p>
-            <input type="text" th:field="*{itemName}" />
+            <input type="text" th:field="*{itemName}" value="えんぴつ" />
         </div>
 
         <div>
             <p>PRICE</p>
-            <input type="text" th:field="*{price}" />
+            <input type="text" th:field="*{price}" value="100" />円
         </div>
 
         <button type="submit">確認</button>

@@ -8,10 +8,9 @@
     <h1>TOP画面</h1>
     
     <ul th:each="item : ${itemList}">
-        <li><span th:text="${item.itemName}">ペン</span>:<span th:text="${item.price}">100円</span>円</li>
+        <li><span th:text="${item.itemName}">ペン</span>:<span th:text="${item.price}">100</span>円</li>
     </ul>
 
-    <a href="/regist/index">登録画面</a>
-
+    <a th:href="@{/regist/index}" href="../regist/regist.html">登録画面</a>
 </body>
 </html>
