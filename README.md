@@ -36,6 +36,12 @@ https://www.casleyconsulting.co.jp/blog/engineer/107/
 * JDK 11
 * git
 
+Windows10にJava(JDK11)をインストールする方法  
+https://fullstacklife.net/programming/install-jdk11-for-win10/  
+
+Git Bashって使ってる？Windowsで動く意外にすごい便利ツール  
+https://www.sejuku.net/blog/72673  
+
 ## 使用するフレームワーク
 
 * spring-boot2.7
