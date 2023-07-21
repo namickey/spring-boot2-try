@@ -2,21 +2,21 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>item登録画面</title>
+    <title>goods登録画面</title>
 </head>
 <body>
-    <h1>item登録画面</h1>
+    <h1>goods登録画面</h1>
     <a th:href="@{/}" href="../top/index.html">TOP画面へ</a>
 
-    <form method="POST" th:action="@{confirm}" action="./confirm.html" th:object="${itemForm}">
+    <form method="POST" th:action="@{confirm}" action="./confirm.html" th:object="${goodsForm}">
         <div>
             <p>ID</p>
             <input type="text" th:field="*{id}" value="3" />
         </div>
 
         <div>
-            <p>ITEM NAME</p>
-            <input type="text" th:field="*{itemName}" value="えんぴつ" />
+            <p>GOODS NAME</p>
+            <input type="text" th:field="*{goodsName}" value="えんぴつ" />
         </div>
 
         <div>

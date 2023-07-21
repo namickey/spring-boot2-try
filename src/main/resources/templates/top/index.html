@@ -8,8 +8,8 @@
     <h1>TOP画面</h1>
     
     <ul>
-        <li th:each="item : ${itemList}">
-            <span th:text="${item.itemName}">ペン</span>:<span th:text="${item.price}">100</span>円
+        <li th:each="goods : ${goodsList}">
+            <span th:text="${goods.goodsName}">ペン</span>:<span th:text="${goods.price}">100</span>円
         </li>
     </ul>
 

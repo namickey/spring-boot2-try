@@ -2,13 +2,13 @@ package com.example.demo.regist;
 
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.Item;
-import com.example.demo.entity.ItemMapper;
+import com.example.demo.entity.Goods;
+import com.example.demo.entity.GoodsMapper;
 
 import lombok.RequiredArgsConstructor;
 
 /**
- * item登録サービス
+ * goods登録サービス
  * 
  * Tips アプリケーションレイヤーの考え方
  * サービスクラス内では、フォームクラスは使用しない。import禁止。
@@ -17,21 +17,21 @@ import lombok.RequiredArgsConstructor;
  */
 @Service
 @RequiredArgsConstructor
-public class ItemRegistService {
+public class GoodsRegistService {
     
-    /** itemマッパー */
-    private final ItemMapper itemMapper;
+    /** goodsマッパー */
+    private final GoodsMapper goodsMapper;
 
     /**
-     * itemを登録する
-     * @param item Item
+     * goodsを登録する
+     * @param goods Goods
      */
-    public void registItem(Item item) {
+    public void registGoods(Goods goods) {
         
         // Tips
-        // Itemクラスにsetter,getterは実装していないが「item.getItemName()」のビルドができる。
-        // Lombokの機能で「@Data」アノテーションをItemクラスに付けることでsetter,getterがclassファイルとして生成されている。
-        System.out.println(item.getItemName());
+        // Goodsクラスにsetter,getterは実装していないが「goods.getGoodsName()」のビルドができる。
+        // Lombokの機能で「@Data」アノテーションをGoodsクラスに付けることでsetter,getterがclassファイルとして生成されている。
+        System.out.println(goods.getGoodsName());
 
 
         // 未実装
@@ -39,6 +39,6 @@ public class ItemRegistService {
 
 
         // DBへ登録する
-        itemMapper.regist(item);
+        goodsMapper.regist(goods);
     }
 }

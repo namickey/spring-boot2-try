@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.example.demo.entity.Item;
+import com.example.demo.entity.Goods;
 
 import lombok.RequiredArgsConstructor;
 
@@ -17,20 +17,20 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class TopController {
 
-    /** item検索サービス */
-    private final ItemFindService itemFindService;
+    /** goods検索サービス */
+    private final GoodsFindService goodsFindService;
 
     /**
-     * トップ画面表示する。itemを全件表示する
+     * トップ画面表示する。goodsを全件表示する
      * @param model Model
      * @return top画面
      */
     @GetMapping("/")
     public String top(Model model) {
-        // item検索サービスから、全件取得する
-        List<Item> itemList = itemFindService.findItems();
+        // goods検索サービスから、全件取得する
+        List<Goods> goodsList = goodsFindService.findGoodss();
         // 取得した結果を設定する
-        model.addAttribute("itemList", itemList);
+        model.addAttribute("goodsList", goodsList);
         // トップ画面を表示する
         return "top/index";
     }

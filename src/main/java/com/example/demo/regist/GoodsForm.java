@@ -3,7 +3,7 @@ package com.example.demo.regist;
 import lombok.Data;
 
 /**
- * itemフォーム
+ * goodsフォーム
  * 
  * Tips アプリケーションレイヤーの考え方
  * フォームクラスはサービスクラスやマッパーでは使用しない。
@@ -13,8 +13,8 @@ import lombok.Data;
  * 各フィールドにアノテーションを付与して、単項目チェックを行う
  */
 @Data
-public class ItemForm {
+public class GoodsForm {
     private Integer id;
-    private String itemName;
+    private String goodsName;
     private Integer price;
 }

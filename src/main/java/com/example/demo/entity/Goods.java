@@ -3,14 +3,14 @@ package com.example.demo.entity;
 import lombok.Data;
 
 /**
- * itemエンティティ
+ * goodsエンティティ
  * 
  * Tips
  * `@Data`がlombokのアノテーションで、setter,getterをclassファイルに対して自動生成してくれる。
  */
 @Data
-public class Item {
+public class Goods {
     private Integer id;
-    private String itemName;
+    private String goodsName;
     private Integer price;
 }
