@@ -1,8 +1,10 @@
 name: ci
 on:
   push:
-    branches:
-      - 'main'
+    #branches:
+    #  - 'main'
+    tags:
+      - 'v*'
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -25,6 +27,8 @@ jobs:
       -
         name: Build and push
         run: |
-          mvn spring-boot:build-image -Dspring-boot.build-image.imageName=namickey/spring-boot2-try:latest
+          : # mvn spring-boot:build-image -Dspring-boot.build-image.imageName=namickey/spring-boot2-try:latest
+          mvn spring-boot:build-image -Dspring-boot.build-image.imageName=namickey/spring-boot2-try:${{ steps.meta.outputs.tags }}
           docker images
-          docker push namickey/spring-boot2-try:latest
+          : # docker push namickey/spring-boot2-try:latest
+          docker push namickey/spring-boot2-try:${{ steps.meta.outputs.tags }}
