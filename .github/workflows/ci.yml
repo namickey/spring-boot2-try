@@ -28,7 +28,7 @@ jobs:
       -
         name: echo tag
         run: |
-          echo ${{ steps.meta.outputs.tags }}
+          echo $DOCKER_METADATA_OUTPUT_VERSION
       -
         name: Login to DockerHub
         uses: docker/login-action@v1
@@ -39,7 +39,7 @@ jobs:
         name: Build and push
         run: |
           : # mvn spring-boot:build-image -Dspring-boot.build-image.imageName=namickey/spring-boot2-try:latest
-          mvn spring-boot:build-image -Dspring-boot.build-image.imageName=namickey/spring-boot2-try:${{ steps.meta.outputs.tags }}
+          mvn spring-boot:build-image -Dspring-boot.build-image.imageName=namickey/spring-boot2-try:$DOCKER_METADATA_OUTPUT_VERSION
           docker images
           : # docker push namickey/spring-boot2-try:latest
-          docker push namickey/spring-boot2-try:${{ steps.meta.outputs.tags }}
+          docker push namickey/spring-boot2-try:$DOCKER_METADATA_OUTPUT_VERSION
