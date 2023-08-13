@@ -121,6 +121,15 @@ git clone https://github.com/namickey/spring-boot2-try.git
 cd spring-boot2-try
 ```
 
+ハンズオンで学ぶGit  
+https://qiita.com/kanekanekaneko/items/c55bf4fc74babf23bbfa  
+
+【Windowsでgitを使おう！】導入方法とはじめにすべき設定まとめ | 侍エンジニアブログ (sejuku.net)  
+https://www.sejuku.net/blog/77097  
+
+GitやGitHubでSSHに接続する方法をわかりやすく解説！ | 侍エンジニアブログ (sejuku.net)  
+https://www.sejuku.net/blog/74220  
+
 ## 実行 spring-boot:run
 
 起動する
@@ -161,16 +170,41 @@ Ctrl + C
 * 検索画面の追加
 * 削除画面の追加
 * スタイルシートの追加
+  * おススメ `Bootstrap`
 * javascriptの追加
+  * おススメ `Vanilla Javascript`
 * etc
+
+## Eclipseを使う場合には`Lombok`の設定が必要
+
+EclipseにLombokをインストールする方法（Lombokエラー対応）  
+https://web-dev.hatenablog.com/entry/eclipse/lombok  
 
 ## 次に業務アプリケーション開発を学ぼう
 https://github.com/namickey/spring-boot2-train
 
-
 ## 公開しよう
 
 * 自分のgithubアカウントを作って、ソースを公開しよう
+
+## 必ず使う`Gitフロー`を覚えよう
+
+【図解】git-flow、GitHub Flowを開発現場で使い始めるためにこれだけは覚えておこう  
+https://atmarkit.itmedia.co.jp/ait/articles/1708/01/news015.html  
+
+Git-flow ～Gitのブランチモデルを知る～  
+https://tracpath.com/bootcamp/learning_git_git_flow.html  
+
+## 必ず使う`Maven`を覚えよう
+
+Mavenとは何ぞや  
+https://qiita.com/ASHITSUBO/items/6c2aa8dd55043781c6b4  
+
+Mavenキホンのキ  
+https://tech-lab.sios.jp/archives/25867  
+
+Mavenの基本勉強メモ  
+https://qiita.com/opengl-8080/items/bb32732f9aa5cb3495d2  
 
 ## 参考　spring initializr
 
@@ -206,7 +240,7 @@ C:.
 │  │      └─templates
 ```
 
-## 参考
+## 参考 設計・開発標準
 
 以下のリンクに、網羅的かつ実務的かつ実用的なspring-boot開発について公開情報あり。
 
