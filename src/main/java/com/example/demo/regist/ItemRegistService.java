@@ -27,16 +27,11 @@ public class ItemRegistService {
      * @param item Item
      */
     public void registItem(Item item) {
+
         
-        // Tips
-        // Itemクラスにsetter,getterは実装していないが「item.getItemName()」のビルドができる。
-        // Lombokの機能で「@Data」アノテーションをItemクラスに付けることでsetter,getterがclassファイルとして生成されている。
-        System.out.println(item.getItemName());
+        // 今回登録する内容とDBに登録済みの内容を比較して、結果によってエラーとする。
 
-
-        // 未実装
-        // 業務処理を実装する。例：今回登録する内容とDBに登録済みの内容を比較して、結果によってエラーとする等。
-
+        
 
         // DBへ登録する
         itemMapper.regist(item);
